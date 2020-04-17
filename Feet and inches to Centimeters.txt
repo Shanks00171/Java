@@ -1,0 +1,38 @@
+class centimeters
+{
+    public static void main(int feet, int inches)
+    {
+        double val = calcFeetAndInchesToCentimeters( feet, inches);
+        System.out.println("Converted = "+val);
+        val = calcFeetAndInchesToCentimeters(inches);        
+        System.out.println("Converted = "+val);
+    }
+    public static double calcFeetAndInchesToCentimeters(int feet, int inches)
+    {
+        if((feet<0)||((inches<0)||(inches>12)))
+        {
+            return -1;
+        }
+        else{
+        double val = ((feet*12)*2.54) + inches*2.54;
+        return val;
+    }
+    }
+    public static double calcFeetAndInchesToCentimeters(int inches)
+    {
+        if(inches<0)
+        {
+            return -1;
+        }
+        else
+        {
+            int feet;
+            feet = inches/12;
+            inches = inches%12;
+            double val = calcFeetAndInchesToCentimeters(feet,inches);
+            return val;
+        }
+    }
+}
+        
+ 

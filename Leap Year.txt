@@ -1,0 +1,33 @@
+public class LeapYear {
+   
+    public static void main(int n)
+    {
+        boolean kirk = isLeapYear(n);
+        System.out.print(kirk);
+    }
+    public static boolean isLeapYear(int year)
+    { boolean bool = false;
+    if((year<=0)||(year>9999))
+    {
+        return bool;
+    }
+    else if(year%4==0)
+    {
+        if(year%100==0)
+        {
+            if(year%400==0)
+            {
+                bool =  true;
+            }
+            else
+            {
+            bool = false;
+            }
+        }
+       else{
+            bool = true;
+        }
+    }
+    return bool;
+}
+}
